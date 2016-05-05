@@ -16,6 +16,6 @@ react-native run-android
 真机上需要改，首先打开Wifi，按手机菜单键，选Dev Sdettings最好一项，地址填js服务器IP:8081
 
 ##参考项目
-http://www.1ke.co/course/269
-https://github.com/vczero/React-Native-App
+http://www.1ke.co/course/269 <br>
+https://github.com/vczero/React-Native-App <br>
 https://www.google.com/design/icons/
