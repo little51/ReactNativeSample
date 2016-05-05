@@ -15,6 +15,7 @@ import React, {
 } from 'react-native';
 import MainView from './views/Main' ;
 import LoginView from './views/Login' ;
+import ItemsView from './views/Items' ;
 
 class ReactNativeSample extends Component {
   configureScene(route){
@@ -22,6 +23,7 @@ class ReactNativeSample extends Component {
   }
 
   renderScene(route, navigator){
+    global._navigator = navigator ;
     if(route.name === 'main'){
       return (
         <MainView navigator={navigator} route={route}/>
@@ -30,6 +32,11 @@ class ReactNativeSample extends Component {
     else if(route.name === 'login'){
       return (
         <LoginView navigator={navigator} route={route}/>
+      );
+    }
+    else if(route.name === 'items'){
+      return (
+        <ItemsView navigator={navigator} route={route}/>
       );
     };
   }

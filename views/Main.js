@@ -17,7 +17,6 @@ import TabNavigator from 'react-native-tab-navigator';
 import HomeView from './Home';
 import ItemsWiew from './Items';
 
-//https://www.google.com/design/icons/
 class MainWiew extends Component {
   constructor(props) {
     super(props);

@@ -14,3 +14,8 @@ npm start
 react-native run-android
 ##6、修改调试地址参数
 真机上需要改，首先打开Wifi，按手机菜单键，选Dev Sdettings最好一项，地址填js服务器IP:8081
+
+##参考项目
+http://www.1ke.co/course/269
+https://github.com/vczero/React-Native-App
+https://www.google.com/design/icons/

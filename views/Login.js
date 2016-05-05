@@ -32,12 +32,12 @@ class LoginView extends Component {
           <Image source={require('image!login') } style={styles.avatarimage}/>
         </View>
         <View style={styles.inputview}>
-          <TextInput underlineColorAndroid='transparent' style={styles.textinput} placeholder='用户名'
+          <TextInput style={styles.textinput} placeholder='用户名'
             onChangeText={(text) => this.setState({ username: text }) }/>
           <View style={styles.dividerview}>
             <Text style={styles.divider}></Text>
           </View>
-          <TextInput underlineColorAndroid='transparent' style={styles.textinput} placeholder='密码'
+          <TextInput style={styles.textinput} placeholder='密码'
             password={true}  onChangeText={(text) => this.setState({ password: text }) }/>
         </View>
         <View style={styles.bottomview}>
@@ -76,12 +76,12 @@ var styles = StyleSheet.create({
     color: '#000000',
   },
   avatarview: {
-    height: 150,
+    height: 100,
     backgroundColor: '#ECEDF1',
     justifyContent: 'center',
   },
   avatarimage: {
-    width: 100,
+    width: 110,
     height: 100,
     alignSelf: 'center'
   },

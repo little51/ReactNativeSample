@@ -12,14 +12,20 @@ import React, {
   TextInput,
   View,
   ScrollView,
-  Alert
+  Alert,
+  Navigator
 } from 'react-native';
 
 import MenuView from './Menu';
 
 class HomeWiew extends Component {
   _onMenuViewClick(title, tag) {
-    Alert.alert('提示', '你点击了:' + title + " Tag:" + tag);
+    if(tag === 'm1'){
+      _navigator.push({'name':'items'}) ;
+    }
+    else{
+      Alert.alert('提示', '你点击了:' + title + " Tag:" + tag);  
+    }    
   }
 
   render() {
