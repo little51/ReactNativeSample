@@ -16,6 +16,7 @@ import React, {
 import TabNavigator from 'react-native-tab-navigator';
 import HomeView from './Home';
 import ItemsWiew from './Items';
+import BarCodeWiew from './Barcode' ;
 
 class MainWiew extends Component {
   constructor(props) {
@@ -24,13 +25,20 @@ class MainWiew extends Component {
       selectedTab: 'home'
     };
   }
+  
+  _onActionSelected(position) {
+    if (position === 0) { 
+       _navigator.push({'name':'barcode'}) ;
+    }
+  }
 
   render() {
     return (
       <View style={styles.container}>
         <ToolbarAndroid navIcon={require('image!ic_menu_black_24dp') }
           actions={toolbarActions}
-          title="主界面"  subtitle="标题" style={styles.toolbar}>
+          title="主界面"  subtitle="标题" style={styles.toolbar}
+           onActionSelected={this._onActionSelected}>
         </ToolbarAndroid>
         <TabNavigator  tabBarStyle={styles.navigator}>
           <TabNavigator.Item

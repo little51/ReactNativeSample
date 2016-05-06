@@ -28,8 +28,9 @@ class LoginView extends Component {
 
   componentWillMount() {
     store.get('username').then(username => {
-      if(username!==undefined){
-          this.props.navigator.push({ name: 'main' });
+      if(username!==undefined && username!==''){
+        console.log(username) ;
+        this.props.navigator.push({ name: 'main' });
       }
     });
   }

@@ -16,6 +16,7 @@ import React, {
 import MainView from './views/Main' ;
 import LoginView from './views/Login' ;
 import ItemsView from './views/Items' ;
+import BarCodeWiew from './views/Barcode' ;
 
 class ReactNativeSample extends Component {
   configureScene(route){
@@ -32,6 +33,11 @@ class ReactNativeSample extends Component {
     else if(route.name === 'login'){
       return (
         <LoginView navigator={navigator} route={route}/>
+      );
+    }
+    else if(route.name === 'barcode'){
+      return (
+        <BarCodeWiew navigator={navigator} route={route}/>
       );
     }
     else if(route.name === 'items'){

@@ -8,6 +8,7 @@
   "dependencies": {
     "react": "^0.14.8",
     "react-native": "^0.24.1",
+    "react-native-barcodescanner": "^1.0.1",
     "react-native-simple-store": "^1.0.1",
     "react-native-tab-navigator": "^0.2.18"
   }
