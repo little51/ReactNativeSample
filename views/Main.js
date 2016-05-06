@@ -30,7 +30,7 @@ class MainWiew extends Component {
       <View style={styles.container}>
         <ToolbarAndroid navIcon={require('image!ic_menu_black_24dp') }
           actions={toolbarActions}
-          title="主界面"  subtitle="副标题" style={styles.toolbar}>
+          title="主界面"  subtitle="标题" style={styles.toolbar}>
         </ToolbarAndroid>
         <TabNavigator  tabBarStyle={styles.navigator}>
           <TabNavigator.Item

@@ -1,8 +1,10 @@
 ##1、新建项目
 react-native init ReactNativeSample
 ##2、安装Tab-navigator
-https://github.com/exponentjs/react-native-tab-navigator
-npm install react-native-tab-navigator --save
+https://github.com/exponentjs/react-native-tab-navigator <br>
+npm install react-native-tab-navigator --save <br>
+https://github.com/jasonmerino/react-native-simple-store <br>
+npm install react-native-simple-store -save
 ##3、FileWatch参数修改
  修改node_modules\react-native\node_modules\node-haste\lib\FileWatcher\index.js
  MAX_WAIT_TIME的值增加一个零
@@ -18,4 +20,6 @@ react-native run-android
 ##参考项目
 http://www.1ke.co/course/269 <br>
 https://github.com/vczero/React-Native-App <br>
-https://www.google.com/design/icons/
+https://www.google.com/design/icons/ <br>
+https://design.google.com/icons/ <br>
+http://www.jianshu.com/p/ec4069314395

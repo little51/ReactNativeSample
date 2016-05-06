@@ -14,14 +14,26 @@ import React, {
   Alert
 } from 'react-native';
 
+import store from 'react-native-simple-store';
+
 class LoginView extends Component {
-   constructor(props) {
+  constructor(props) {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      loggedIn: false
     };
   }
+
+  componentWillMount() {
+    store.get('username').then(username => {
+      if(username!==undefined){
+          this.props.navigator.push({ name: 'main' });
+      }
+    });
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -53,9 +65,15 @@ class LoginView extends Component {
     var username = this.state.username;
     var password = this.state.password;
     if (username === '123' && password === '123') {
+      store.save('username', {
+        username: username
+      });
       this.props.navigator.push({ name: 'main' });
     }
     else {
+      store.save('username', {
+        username: undefined
+      });
       Alert.alert('提示', '用户名或口令错误!');
     }
   }

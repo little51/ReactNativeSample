@@ -11,7 +11,8 @@ import React, {
   Alert,
   ListView,
   TouchableHighlight,
-  Image
+  Image,
+  ToolbarAndroid
 } from 'react-native';
 
 class ItemsWiew extends Component {
@@ -51,11 +52,21 @@ class ItemsWiew extends Component {
       </TouchableHighlight>
     );
   }
+  
+  _onIconClicked() {
+     _navigator.pop() ;
+  }
+
   render() {
     return (
-      <ListView
-        dataSource={this.state.ds}
-        renderRow={this.renderRow.bind(this) }/>
+      <View>
+        <ToolbarAndroid navIcon={require('image!ic_arrow_back_black_24dp') }
+          title="列表" style={styles.toolbar} onIconClicked={this._onIconClicked}>
+        </ToolbarAndroid>
+        <ListView
+          dataSource={this.state.ds}
+          renderRow={this.renderRow.bind(this) }/>
+      </View>
     );
   }
 }
@@ -93,7 +104,11 @@ const styles = StyleSheet.create({
   separator: {
     height: 1,
     backgroundColor: '#dddddd'
-  }
+  },
+  toolbar: {
+    backgroundColor: '#e9eaed',
+    height: 56,
+  },
 });
 
 module.exports = ItemsWiew;
