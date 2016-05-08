@@ -1,3 +1,4 @@
+##0、React Native开发环境配置可参见根目录下的《React Native for Android实践.doc》
 ##1、新建项目
 react-native init ReactNativeSample
 ##2、安装Tab-navigator
