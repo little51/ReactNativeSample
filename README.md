@@ -22,9 +22,11 @@ rnpm link react-native-barcodescanner
 npm start
 ##8、发布到手机
 最好用真机，如果用模拟器，要用genymotion搭配VirtualBox-4.3.10
-react-native run-android
+react-native run-android<br>
+在有的android5.1手机上，会在安装到98%时报com.android.ddmlib.InstallException: Unable to upload some APKs的错误，原因是gradle version 1.3.1的问题<br>
+http://www.hacksparrow.com/react-native-android-unable-to-upload-some-apks.html
 ##9、修改调试地址参数
-真机上需要改，首先打开Wifi，按手机菜单键，选Dev Sdettings最好一项，地址填js服务器IP:8081
+真机上需要改，首先打开Wifi，按手机菜单键，选Dev Sdettings最好一项，地址填js服务器IP:8081 
 ##10、打包成APK
 参照
 http://www.lcode.org/%E3%80%90react-native%E5%BC%80%E5%8F%91%E3%80%91react-native%E8%BF%9B%E8%A1%8C%E7%AD%BE%E5%90%8D%E6%89%93%E5%8C%85%E6%88%90apk/ <br>
